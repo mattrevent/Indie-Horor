@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c0jwu58x33jju"]
+
+[ext_resource type="PackedScene" uid="uid://rgd4wah16rcw" path="res://world/assets/flashlight.glb" id="1_xwov7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k6jac"]
+size = Vector3(0.114868164, 0.14139557, 0.37145996)
+
+[node name="DroppedFlashlight" type="RigidBody3D" unique_id=383974066 groups=["Flashlight"]]
+
+[node name="flashlight" parent="." unique_id=201448868 instance=ExtResource("1_xwov7")]
+transform = Transform3D(0.08, 0, 0, 0, 0.094, 0, 0, 0, 0.083, 0.023165643, 0.16283965, 0.0046530366)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=363366274]
+transform = Transform3D(1, 0, 0, 0, 1, -2.9802322e-08, 0, 0, 1, 0.021789555, 0.17664751, -0.037052393)
+shape = SubResource("BoxShape3D_k6jac")
